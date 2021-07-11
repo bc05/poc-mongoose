@@ -1,0 +1,12 @@
+version: '3'
+services:
+  database:
+    image: 'mongo'
+    environment:
+      - MONGO_INITDB_DATABASE=poc
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+    volumes:
+      - ./db:/data/db
+    ports:
+      - '27018:27018'
